@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Questão 01</title>
+</head>
+<body>
+
+<h3>1. Replacing characters in place:</h3>
+<input id="frase" placeholder="Digite uma frase aqui"/>
+<button onclick="teste()">Testar</button>
+<br><br>
+<span id="resultado"></span>
+<script>
+    function teste(){
+        var exemplo = document.getElementById("frase").value;
+        var resultado = [];
+        var saida = "";
+        for(var i = 0; i < exemplo.length; i++){
+           resultado[i] = exemplo[i];
+           if(resultado[i] == " "){
+               resultado[i] = "&32";
+           }
+           saida += resultado[i];
+        }
+        document.getElementById("resultado").innerHTML = "Resultado: "+saida;
+    }
+</script>
+</body>
+</html>
