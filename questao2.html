@@ -7,29 +7,33 @@
 
 <h3>2. Check words with jumbled letters:</h3>
 <input id="frase1" placeholder="Digite uma frase aqui"/>
+<br><br>
 <input id="frase2" placeholder="Digite uma frase aqui"/>
+<br><br>
 <button onclick="teste()">Testar</button>
 <br><br>
 <span id="resultado"></span>
 <script>
-    function teste(){
+    async function teste(){
         var exemplo1 = document.getElementById("frase1").value;
         var exemplo2 = document.getElementById("frase2").value;
-        var resultado = [];
+        var count = 0;
         if(exemplo1.length!==exemplo2.length || exemplo1[0]!=exemplo2[0]){
             alert("tamanhos diferentes ou primeira letra diferente");
         }else{
-            for(var i = 0; i < exemplo1.length; i++){
-                for(var j = 0; j < exemplo2. length; j++){
-                    if(exemplo1[i]==exemplo2[j]){
-                        resultado[i] = exemplo2[j];
+            // ler primeiro array
+            for(var j = 0; j < exemplo1.length; j++){
+                //percorrer o segundo array comparando o exemplo1[0] com os valores do exemplo[]
+                for(var i = 0; i < exemplo2.length; i++){
+                    if(exemplo1[j]==exemplo2[i]){
+                        console.log("parecida");
                     }else{
-                        console.log("diferentes");
+                        console.log("não parecida");
                     }
                 }
             }
-        }
 
+        }
 
     }
 </script>
