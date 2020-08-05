@@ -26,13 +26,23 @@
                 //percorrer o segundo array comparando o exemplo1[0] com os valores do exemplo[]
                 for(var i = 0; i < exemplo2.length; i++){
                     if(exemplo1[j]==exemplo2[i]){
-                        console.log("parecida");
-                    }else{
-                        console.log("não parecida");
+                        console.log("String 1: "+exemplo1[j]+" e String2: "+exemplo2[i]);
+                        count++;
+                        console.log("parece");
+                        break;
+                    }else if(exemplo1[j]!=exemplo2[i]){
+                        console.log("String 1: "+exemplo1[j]+" e String2: "+exemplo2[i]);
+                        console.log("não parece");
                     }
                 }
             }
 
+        }
+
+        if(count<exemplo1.length){
+            alert("Não parecem");
+        }else{
+            alert("parecem");
         }
 
     }
